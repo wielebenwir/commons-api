@@ -1,0 +1,121 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "https://github.com/wielebenwir/commons-api",
+    "title": "Commons Api Schema",
+    "description": "A schema for items that can be booked",
+    "definitions": {
+        "slot": {
+            "type": "object",
+            "description": "A time slot at which an item can be booked or has been booked at a certain location.",
+            "properties": {
+                "start": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "end": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "location_id": {
+                    "type": "string"
+                },
+                "available": {
+                    "type": "boolean",
+                    "description":
+                        "True if this item can still be booked for this time slot. False if the item has already been booked for this time slot."
+                }
+            },
+            "required": ["start", "end", "location_id", "available"]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "project": {
+            "type": "object",
+            "description": "The project that organizes the lending of the items",
+            "properties": {
+                "name": { "type": "string" },
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "description": { "type": "string" },
+                "image": { "type": "string", "format": "uri" },
+                "language": { "type": "string" }
+            },
+            "required": ["name", "url"]
+        },
+        "publish_on": {
+            "type": "array",
+            "description":
+                "Which sites are allowed to consume this data? If the publish_on field is used and a site is not listed here, it is expected to refrain from using the provided data. Sites are expected to respect this convention. The owner of the data may allow every site to consume the data by omitting this field or by explicitely adding 'all' to the array.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "locations": {
+            "type": "array",
+            "descriptions": "The locations at which users can pick up items.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": { "type": "string" },
+                    "name": { "type": "string" },
+                    "description": { "type": "string" },
+                    "url": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "latitude": { "type": "number" },
+                    "longitude": { "type": "number" }
+                },
+                "required": ["id", "name", "latitude", "longitude"]
+            },
+            "uniqueItems": true
+        },
+        "owners": {
+            "type": "object",
+            "descriptions": "The owners of the items",
+            "properties": {
+                "name": { "type": "string" },
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "required": ["name"]
+        },
+        "items": {
+            "type": "array",
+            "descriptions": "The items that can be booked on this site.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": { "type": "string" },
+                    "name": { "type": "string" },
+                    "url": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "image": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "description": { "type": "string" },
+                    "owner_id": { "type": "string" },
+                    "availability": {
+                        "type": "array",
+                        "description":
+                            "A list of time slots at which the item can be booked or already have been booked",
+                        "items": {
+                            "$ref": "#/definitions/slot"
+                        }
+                    }
+                },
+                "required": ["id", "name", "url", "availability"]
+            },
+            "uniqueItems": true
+        }
+    },
+    "required": ["items", "locations", "owners", "project"]
+}
