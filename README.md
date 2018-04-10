@@ -23,6 +23,6 @@ Commons Booking provides initiatives with a tool to manage and lend common goods
 
 ## Draft
 
-The API is defined in a [JSON schema](https://github.com/wielebenwir/commons-api/blob/branch/commons-api.schema.json) in this repository. We have used schema descriptions to self-document the format. You can use the [JSON schema validator](https://www.jsonschemavalidator.net/) to try out the schema. Just paste the file content into the left field and start to compose your first Commons API data.
+The API is defined in a [JSON schema](https://github.com/wielebenwir/commons-api/blob/master/commons-api.schema.json) in this repository. We have used schema descriptions to self-document the format. You can use the [JSON schema validator](https://www.jsonschemavalidator.net/) to try out the schema. Just paste the file content into the left field and start to compose your first Commons API data.
 
 [TODO]: Add Example of a json return for a bike from the commons cargobike project http://kasimir-lastenrad.de.
