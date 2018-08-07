@@ -12,6 +12,8 @@ By design, the API will not be collecting/sharing any user data, individual proj
 
 We are looking for contributers, both developers and sharing initiatives.
 
+* [Join our mailing list](https://ml06.ispgateway.de/mailman/listinfo/commons-api_wielebenwir.de)
+
 ## Implementation
 
 As a first step, we are working to implement the API into 2 projects that are already widely used to share cargo bikes:
