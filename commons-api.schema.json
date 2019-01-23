@@ -19,10 +19,9 @@
         "location_id": {
           "type": "string"
         },
-        "available": {
-          "type": "boolean",
-          "description":
-            "True if this item can still be booked for this time slot. False if the item has already been booked for this time slot."
+        "status": {
+          "type": "string",
+          "description": "'booked' or 'available'"
         }
       },
       "required": ["start", "end", "location_id", "available"]
@@ -47,8 +46,7 @@
     },
     "publish_on": {
       "type": "array",
-      "description":
-        "Which sites are allowed to consume this data? If the publish_on field is used and a site is not listed here, it is expected to refrain from using the provided data. Sites are expected to respect this convention. The owner of the data may allow every site to consume the data by omitting this field or by explicitely adding 'all' to the array.",
+      "description": "Which sites are allowed to consume this data? If the publish_on field is used and a site is not listed here, it is expected to refrain from using the provided data. Sites are expected to respect this convention. The owner of the data may allow every site to consume the data by omitting this field or by explicitely adding 'all' to the array.",
       "items": {
         "type": "string"
       }
