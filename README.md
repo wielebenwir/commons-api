@@ -20,10 +20,10 @@ By design, the API will not be collecting/sharing any user data, individual proj
   },
   "items": [
     {
-      "id": 1,
+      "uid": 1,
       "name": "Cargo Bike Blue",
       "url": "http://localhost/item/cargo-bike-blue/",
-      "owner_id": 1,
+      "owner_uid": 1,
       "availability": [
         {
           "status": "available",
@@ -46,18 +46,24 @@ By design, the API will not be collecting/sharing any user data, individual proj
   },
   "locations": {
     "4": {
-      "id": 4,
+      "uid": 4,
       "name": "Berlin biscuits",
       "url": "http://localhost/location/berlin-biscuits/"
     },
     "3": {
-      "id": 3,
+      "uid": 3,
       "name": "Budapest fairest",
       "url": "http://localhost/location/budapest-fairest/"
     }
   }
 }
 ```
+
+## Extending the API with item metadata
+
+The Commons Api scheme is thought of as a basis from which to start. Providers should create their own schemas that add specific metadata to the base scheme. This can be done by using "allOf" with "additionalProperties" set to false. See the [JSON schema reference on combining schemes](https://json-schema.org/understanding-json-schema/reference/combining.html) for further details.
+
+This repository contains the [Velogistics Api](https://github.com/wielebenwir/commons-api/blob/master/velogistics-api.schema.json) for cargobikes as an example for this.
 
 ## Contributing
 

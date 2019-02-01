@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://github.com/wielebenwir/commons-api",
+  "id": "https://github.com/wielebenwir/commons-api/blob/master/commons-api.schema.json",
   "title": "Commons Api Schema",
   "description": "A schema for items that can be booked",
   "definitions": {
