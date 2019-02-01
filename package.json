@@ -1,0 +1,23 @@
+{
+  "name": "commons-api",
+  "version": "1.0.0",
+  "description": "An api for sharable items",
+  "main": "commons-api.schema.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wielebenwir/commons-api.git"
+  },
+  "keywords": [
+    "api",
+    "commons"
+  ],
+  "author": "Christian Voigt",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/wielebenwir/commons-api/issues"
+  },
+  "homepage": "https://github.com/wielebenwir/commons-api#readme"
+}
