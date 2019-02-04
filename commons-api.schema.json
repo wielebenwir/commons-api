@@ -61,7 +61,7 @@
           "description": "'booked' or 'available'"
         }
       },
-      "required": ["start", "end", "location_id", "available"]
+      "required": ["start", "end", "location_uid"]
     }
   },
   "type": "object",
