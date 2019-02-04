@@ -22,22 +22,22 @@ The Commons Api uses the [GeoJson](http://geojson.org/) format for locations. Ea
   },
   "items": [
     {
-      "uid": 1,
+      "uid": "1",
       "name": "Cargo Bike Blue",
       "url": "http://localhost/item/cargo-bike-blue/",
-      "owner_uid": 1,
+      "owner_uid": "1",
       "availability": [
         {
           "status": "available",
-          "start": "2019-01-24 08:00:00",
-          "end": "2019-01-24 08:00:00",
-          "location": 4
+          "start": "2019-01-24T08:00:00",
+          "end": "2019-01-24T08:00:00",
+          "location_uid": "4"
         },
         {
           "status": "booked",
-          "start": "2019-01-25 08:00:00",
-          "end": "2019-01-25 08:00:00",
-          "location": 4
+          "start": "2019-01-25T08:00:00",
+          "end": "2019-01-25T08:00:00",
+          "location_uid": "4"
         }
       ],
       "description": "My favorite bike."
@@ -56,7 +56,7 @@ The Commons Api uses the [GeoJson](http://geojson.org/) format for locations. Ea
           "coordinates": [123456, 123456]
         },
         "properties": {
-          "uid": 4,
+          "uid": "4",
           "name": "Berlin biscuits",
           "url": "http://localhost/location/berlin-biscuits/"
         }
@@ -68,7 +68,7 @@ The Commons Api uses the [GeoJson](http://geojson.org/) format for locations. Ea
           "coordinates": [123456, 123456]
         },
         "properties": {
-          "uid": 3,
+          "uid": "3",
           "name": "Budapest fairest",
           "url": "http://localhost/location/budapest-fairest/"
         }
