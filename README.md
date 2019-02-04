@@ -8,6 +8,8 @@ This project aims to create a standard format for exchanging information between
 
 By design, the API will not be collecting/sharing any user data, individual projects will remain in total control.
 
+The Commons Api uses the [GeoJson](http://geojson.org/) format for locations. Each location is a GeoJson feature with a GeoJson point containing its coordinates. Locations are stored in GeoJson FeatureCollection.
+
 ## Example
 
 ```json
@@ -45,16 +47,33 @@ By design, the API will not be collecting/sharing any user data, individual proj
     "1": { "name": "admin", "url": "http://localhost/author/admin/" }
   },
   "locations": {
-    "4": {
-      "uid": 4,
-      "name": "Berlin biscuits",
-      "url": "http://localhost/location/berlin-biscuits/"
-    },
-    "3": {
-      "uid": 3,
-      "name": "Budapest fairest",
-      "url": "http://localhost/location/budapest-fairest/"
-    }
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [123456, 123456]
+        },
+        "properties": {
+          "uid": 4,
+          "name": "Berlin biscuits",
+          "url": "http://localhost/location/berlin-biscuits/"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [123456, 123456]
+        },
+        "properties": {
+          "uid": 3,
+          "name": "Budapest fairest",
+          "url": "http://localhost/location/budapest-fairest/"
+        }
+      }
+    ]
   }
 }
 ```

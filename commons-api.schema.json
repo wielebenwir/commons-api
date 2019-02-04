@@ -4,6 +4,43 @@
   "title": "Commons Api Schema",
   "description": "A schema for items that can be booked",
   "definitions": {
+    "location": {
+      "type": "object",
+      "description": "A GeoJson feature describing a location at which users can pick up items.",
+      "properties": {
+        "type": { "type": "string", "enum": ["Feature"] },
+        "properties": {
+          "type": "object",
+          "description": "The properties of the location",
+          "properties": {
+            "uid": { "type": "string" },
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": ["name", "uid"]
+        },
+        "geometry": {
+          "type": "object",
+          "description": "A GeoJson point, containing the coordinates of the location",
+          "required": ["type", "coordinates"],
+          "properties": {
+            "type": { "type": "string", "enum": ["Point"] },
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "required": ["type", "properties", "geometry"]
+    },
     "slot": {
       "type": "object",
       "description": "A time slot at which an item can be booked or has been booked at a certain location.",
@@ -53,21 +90,14 @@
     },
     "locations": {
       "type": "object",
-      "descriptions": "A dictionary of the locations at which users can pick up items. Keys are the location unique ids.",
-      "additionalProperties": {
-        "type": "object",
-        "properties": {
-          "uid": { "type": "string" },
-          "name": { "type": "string" },
-          "description": { "type": "string" },
-          "url": {
-            "type": "string",
-            "format": "uri"
-          },
-          "latitude": { "type": "number" },
-          "longitude": { "type": "number" }
-        },
-        "required": ["id", "name", "latitude", "longitude"]
+      "descriptions": "A GeoJson feature collection of the locations at which users can pick up items.",
+      "required": ["type", "features"],
+      "properties": {
+        "type": { "type": "string", "enum": ["FeatureCollection"] },
+        "features": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/location" }
+        }
       }
     },
     "owners": {
