@@ -1,6 +1,6 @@
 {
   "name": "commons-api",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "An api for sharable items",
   "main": "commons-api.schema.json",
   "scripts": {
@@ -13,6 +13,10 @@
   "keywords": [
     "api",
     "commons"
+  ],
+  "files": [
+    "./commons-api.schema.json",
+    "./velogistics-api.schema.json"
   ],
   "author": "Christian Voigt",
   "license": "GPL-3.0-or-later",
