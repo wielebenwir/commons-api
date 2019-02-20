@@ -19,7 +19,8 @@
             "url": {
               "type": "string",
               "format": "uri"
-            }
+            },
+            "address": { "type": "string" }
           },
           "required": ["name", "uid"]
         },
