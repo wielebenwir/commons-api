@@ -26,7 +26,7 @@
               }
             },
             "required": [
-              "wheels",
+              "nr_of_wheels",
               "can_transport_children",
               "max_transport_weight"
             ]
