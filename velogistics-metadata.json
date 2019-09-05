@@ -1,0 +1,11 @@
+{
+    "itemType": ["type 1", "type 2", "type 3", "type 4", "type 5"],
+    "features": [
+        "feature 1",
+        "feature 2",
+        "feature 3",
+        "feature 4",
+        "feature 5",
+        "feature 6"
+    ]
+}

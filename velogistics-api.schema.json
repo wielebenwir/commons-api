@@ -1,39 +1,45 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/wielebenwir/commons-api/blob/master/velogistics-api.schema.json",
-  "title": "Velogistics Api",
-  "description": "Extension of the Commons Api for cargo bikes",
-  "allOf": [
-    {
-      "$ref": "https://github.com/wielebenwir/commons-api/blob/master/commons-api.schema.json"
-    },
-    {
-      "type": "object",
-      "properties": {
-        "items": {
-          "type": "array",
-          "items": {
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://github.com/wielebenwir/commons-api/blob/master/velogistics-api.schema.json",
+    "title": "Velogistics Api",
+    "description": "Extension of the Commons Api for cargo bikes",
+    "allOf": [
+        {
+            "$ref": "https://github.com/wielebenwir/commons-api/blob/master/commons-api.schema.json"
+        },
+        {
             "type": "object",
             "properties": {
-              "nr_of_wheels": {
-                "type": "integer"
-              },
-              "can_transport_children": {
-                "type": "boolean"
-              },
-              "max_transport_weight": {
-                "type": "number"
-              }
-            },
-            "required": [
-              "nr_of_wheels",
-              "can_transport_children",
-              "max_transport_weight"
-            ]
-          },
-          "uniqueItems": true
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "itemType": {
+                                "type": "string"
+                            },
+                            "features": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "load_capacity": {
+                                "type": "number"
+                            },
+                            "box_dimensions": {
+                                "type": "object",
+                                "properties": {
+                                    "length": { "type": "number" },
+                                    "width": { "type": "number" },
+                                    "height": { "type": "number" }
+                                }
+                            }
+                        }
+                    },
+                    "uniqueItems": true
+                }
+            }
         }
-      }
-    }
-  ]
+    ]
 }

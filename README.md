@@ -1,6 +1,6 @@
 # Commons API
 
-API for retrieving item information, availability and location of common good item(s), defined as a [JSON schema](http://json-schema.org/).
+API for retrieving item information, availability and location of common good item(s), defined as a [JSON schema](http://json-schema.org/). Please note that this is still a work in progress and not a finished API.
 
 ![](img/portal.png)
 
@@ -14,67 +14,67 @@ The Commons Api uses the [GeoJson](http://geojson.org/) format for locations. Ea
 
 ```json
 {
-  "project": {
-    "name": "V",
-    "url": "http://localhost/",
-    "description": "Just another WordPress site",
-    "language": "en_US"
-  },
-  "items": [
-    {
-      "uid": "1",
-      "name": "Cargo Bike Blue",
-      "url": "http://localhost/item/cargo-bike-blue/",
-      "owner_uid": "1",
-      "availability": [
+    "project": {
+        "name": "V",
+        "url": "http://localhost/",
+        "description": "Just another WordPress site",
+        "language": "en_US"
+    },
+    "items": [
         {
-          "status": "available",
-          "start": "2019-01-24T08:00:00",
-          "end": "2019-01-24T08:00:00",
-          "location_uid": "4"
-        },
-        {
-          "status": "booked",
-          "start": "2019-01-25T08:00:00",
-          "end": "2019-01-25T08:00:00",
-          "location_uid": "4"
+            "uid": "1",
+            "name": "Cargo Bike Blue",
+            "url": "http://localhost/item/cargo-bike-blue/",
+            "owner_uid": "1",
+            "availability": [
+                {
+                    "status": "available",
+                    "start": "2019-01-24T08:00:00",
+                    "end": "2019-01-24T08:00:00",
+                    "location_uid": "4"
+                },
+                {
+                    "status": "booked",
+                    "start": "2019-01-25T08:00:00",
+                    "end": "2019-01-25T08:00:00",
+                    "location_uid": "4"
+                }
+            ],
+            "description": "My favorite bike."
         }
-      ],
-      "description": "My favorite bike."
+    ],
+    "owners": {
+        "1": { "name": "admin", "url": "http://localhost/author/admin/" }
+    },
+    "locations": {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [123456, 123456]
+                },
+                "properties": {
+                    "uid": "4",
+                    "name": "Berlin biscuits",
+                    "url": "http://localhost/location/berlin-biscuits/"
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [123456, 123456]
+                },
+                "properties": {
+                    "uid": "3",
+                    "name": "Budapest fairest",
+                    "url": "http://localhost/location/budapest-fairest/"
+                }
+            }
+        ]
     }
-  ],
-  "owners": {
-    "1": { "name": "admin", "url": "http://localhost/author/admin/" }
-  },
-  "locations": {
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [123456, 123456]
-        },
-        "properties": {
-          "uid": "4",
-          "name": "Berlin biscuits",
-          "url": "http://localhost/location/berlin-biscuits/"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [123456, 123456]
-        },
-        "properties": {
-          "uid": "3",
-          "name": "Budapest fairest",
-          "url": "http://localhost/location/budapest-fairest/"
-        }
-      }
-    ]
-  }
 }
 ```
 
@@ -82,20 +82,22 @@ The Commons Api uses the [GeoJson](http://geojson.org/) format for locations. Ea
 
 The Commons Api scheme is thought of as a basis from which to start. Providers should create their own schemas that add specific metadata to the base scheme. This can be done by using "allOf" with "additionalProperties" set to false. See the [JSON schema reference on combining schemes](https://json-schema.org/understanding-json-schema/reference/combining.html) for further details.
 
-This repository contains the [Velogistics Api](https://github.com/wielebenwir/commons-api/blob/master/velogistics-api.schema.json) for cargobikes as an example for this.
+This repository contains the [Velogistics Api](https://github.com/wielebenwir/commons-api/blob/master/velogistics-api.schema.json) for cargobikes as an example for this. It adds itemType, features, load capacity and box dimensions as metadata properties.
+
+Providers or consumers of Velogistics API data can use the [velogistics-metadata.json file](https://github.com/wielebenwir/commons-api/blob/master/velogistics-metadata.json) to get lists of all item type and feature values supported by Commons Booking 2 and the Commons Hub. As we are still in the process of defining this metadata for cargo bikes, we are currently using fake data to test this.
 
 ## Contributing
 
 We are looking for contributers, both developers and sharing initiatives.
 
-- [Join our mailing list](https://ml06.ispgateway.de/mailman/listinfo/commons-api_wielebenwir.de)
+-   [Join our mailing list](https://ml06.ispgateway.de/mailman/listinfo/commons-api_wielebenwir.de)
 
 ## Implementation
 
 As a first step, we are working to implement the API into 2 projects that are already widely used to share cargo bikes:
 
-- Booking software: [Commons Booking](https://github.com/wielebenwir/commons-booking-2) (Wordpress Plugin, used by over 60 sharing initiatives)
-- Hub: [velogistics.net](http://velogistics.net) (Cargobike-sharing portal with more than 250 available bikes)
+-   Booking software: [Commons Booking](https://github.com/wielebenwir/commons-booking-2) (Wordpress Plugin, used by over 60 sharing initiatives)
+-   Hub: [velogistics.net](http://velogistics.net) (Cargobike-sharing portal with more than 250 available bikes)
 
 Commons Booking provides initiatives with a tool to manage and lend common goods, the successor of velogistics will serve as the hub connecting the individual installations.
 
