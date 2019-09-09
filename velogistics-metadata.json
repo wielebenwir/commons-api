@@ -1,11 +1,17 @@
 {
-    "itemType": ["type 1", "type 2", "type 3", "type 4", "type 5"],
+    "itemType": [
+        "two wheels (single-lane)",
+        "more than two wheels (two-lane bike)",
+        "trailer"
+    ],
     "features": [
-        "feature 1",
-        "feature 2",
-        "feature 3",
-        "feature 4",
-        "feature 5",
-        "feature 6"
+        "Seats for Children",
+        "Rain Protection",
+        "Pedelec (E-Motor)",
+        "Lockable Box",
+        "Lock",
+        "Tow Bar",
+        "Strap",
+        "Special-purpose bike (rickshaw, coffee-Bike, wheelchair transport, ...)"
     ]
 }

@@ -84,7 +84,7 @@ The Commons Api scheme is thought of as a basis from which to start. Providers s
 
 This repository contains the [Velogistics Api](https://github.com/wielebenwir/commons-api/blob/master/velogistics-api.schema.json) for cargobikes as an example for this. It adds itemType, features, load capacity and box dimensions as metadata properties.
 
-Providers or consumers of Velogistics API data can use the [velogistics-metadata.json file](https://github.com/wielebenwir/commons-api/blob/master/velogistics-metadata.json) to get lists of all item type and feature values supported by Commons Booking 2 and the Commons Hub. As we are still in the process of defining this metadata for cargo bikes, we are currently using fake data to test this.
+Providers or consumers of Velogistics API data can use the [velogistics-metadata.json file](https://github.com/wielebenwir/commons-api/blob/master/velogistics-metadata.json) to get lists of all item type and feature values supported by Commons Booking 2 and the Commons Hub. We are still in the process of defining this metadata for cargo bikes, so it is likely to change.
 
 ## Contributing
 
@@ -94,7 +94,7 @@ We are looking for contributers, both developers and sharing initiatives.
 
 ## Implementation
 
-See our presenation at FFL2019: [Datei:Florian Egermann Presentation CommonsBooking FFL2019.pdf – Forum Freie Lastenräder](http://dein-lastenrad.de/index.php?title=Datei:Florian_Egermann_Presentation_CommonsBooking_FFL2019.pdf#Beschreibung) 
+See our presenation at FFL2019: [Datei:Florian Egermann Presentation CommonsBooking FFL2019.pdf – Forum Freie Lastenräder](http://dein-lastenrad.de/index.php?title=Datei:Florian_Egermann_Presentation_CommonsBooking_FFL2019.pdf#Beschreibung)
 
 As a first step, we are working to implement the API into 2 projects that are already widely used to share cargo bikes:
 
@@ -108,4 +108,3 @@ Commons Booking provides initiatives with a tool to manage and lend common goods
 The API is defined in a [JSON schema](https://github.com/wielebenwir/commons-api/blob/master/commons-api.schema.json) in this repository. We have used schema descriptions to self-document the format. You can use the [JSON schema validator](https://www.jsonschemavalidator.net/) to try out the schema. Just paste the file content into the left field and start to compose your first Commons API data.
 
 [TODO]: Add Example of a json return for a bike from the commons cargobike project http://kasimir-lastenrad.de.
-
