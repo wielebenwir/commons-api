@@ -1,7 +1,7 @@
 {
     "itemType": [
         { "id": "single_lane", "name": "two wheels (single-lane)" },
-        { "id": "two-lane", "name": "more than two wheels (two-lane bike)" },
+        { "id": "two_lane", "name": "more than two wheels (two-lane bike)" },
         { "id": "trailer", "name": "trailer" }
     ],
     "features": [

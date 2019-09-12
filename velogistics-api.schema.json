@@ -24,13 +24,13 @@
                                     "type": "string"
                                 }
                             },
-                            "is_commercial": {
+                            "isCommercial": {
                                 "type": "boolean"
                             },
-                            "load_capacity": {
+                            "loadCapacity": {
                                 "type": "number"
                             },
-                            "box_dimensions": {
+                            "boxDimensions": {
                                 "type": "object",
                                 "properties": {
                                     "length": { "type": "number" },
