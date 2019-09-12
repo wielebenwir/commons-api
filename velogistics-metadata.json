@@ -1,17 +1,20 @@
 {
     "itemType": [
-        "two wheels (single-lane)",
-        "more than two wheels (two-lane bike)",
-        "trailer"
+        { "id": "single_lane", "name": "two wheels (single-lane)" },
+        { "id": "two-lane", "name": "more than two wheels (two-lane bike)" },
+        { "id": "trailer", "name": "trailer" }
     ],
     "features": [
-        "Seats for Children",
-        "Rain Protection",
-        "Pedelec (E-Motor)",
-        "Lockable Box",
-        "Lock",
-        "Tow Bar",
-        "Strap",
-        "Special-purpose bike (rickshaw, coffee-Bike, wheelchair transport, ...)"
+        { "id": "seats_children", "name": "Seats for Children" },
+        { "id": "rain_protection", "name": "Rain Protection" },
+        { "id": "pedelec", "name": "Pedelec (E-Motor)" },
+        { "id": "lockable_box", "name": "Lockable Box" },
+        { "id": "lock", "name": "Lock" },
+        { "id": "tow_bar", "name": "Tow Bar" },
+        { "id": "strap", "name": "Strap" },
+        {
+            "id": "special_purpose",
+            "name": "Special-purpose bike (rickshaw, coffee-Bike, wheelchair transport, ...)"
+        }
     ]
 }
