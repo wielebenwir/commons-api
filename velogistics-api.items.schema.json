@@ -5,7 +5,7 @@
     "description": "Extension of the Commons Api for cargo bikes",
     "allOf": [
         {
-            "$ref": "https://github.com/wielebenwir/commons-api/blob/master/commons-api.schema.json"
+            "$ref": "https://github.com/wielebenwir/commons-api/blob/master/commons-api.items.schema.json"
         },
         {
             "type": "object",

@@ -2,9 +2,6 @@
     "name": "commons-api",
     "version": "0.1.0",
     "description": "An api for sharable items",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/wielebenwir/commons-api.git"
@@ -14,8 +11,12 @@
         "commons"
     ],
     "files": [
-        "commons-api.schema.json",
-        "velogistics-api.schema.json",
+        "commons-api.items.schema.json",
+        "commons-api.locations.schema.json",
+        "commons-api.owners.schema.json",
+        "commons-api.projects.schema.json",
+        "commons-api.availability.schema.json",
+        "velogistics-api.items.schema.json",
         "velogistics-metadata.json"
     ],
     "author": "Christian Voigt",
