@@ -10,6 +10,9 @@
         {
             "type": "object",
             "properties": {
+                "publishOnVelogistics": {
+                    "type": "boolean"
+                },
                 "items": {
                     "type": "array",
                     "items": {
