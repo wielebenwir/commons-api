@@ -6,7 +6,7 @@
     "definitions": {
         "availabilitySlot": {
             "type": "object",
-            "description": "A time slot at which an item can be booked or has been booked at a certain location.",
+            "description": "A time slot at which an item can be booked at a certain location.",
             "properties": {
                 "start": {
                     "type": "string",
@@ -21,22 +21,9 @@
                 },
                 "itemId": {
                     "type": "string"
-                },
-                "statusName": {
-                    "type": "string"
-                },
-                "statusId": {
-                    "type": "string"
                 }
             },
-            "required": [
-                "start",
-                "end",
-                "locationId",
-                "itemId",
-                "statusName",
-                "statusId"
-            ]
+            "required": ["start", "end", "locationId", "itemId"]
         }
     },
     "type": "object",

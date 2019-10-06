@@ -69,7 +69,7 @@ Returns availability slots of all bookable items. Availability slots describe wh
 -   JSON schema of the response
     -   [commons-api.availability.schema.json](https://github.com/wielebenwir/commons-api/blob/master/commons-api.availability.schema.json)
 
-Returns availability slots of a specific item. Note that Commons Booking 2 will only return slots for the next two weeks.
+Returns availability slots of a specific item that describe a time period during which an item is available at a certain location. Note that Commons Booking 2 will only return daily slots for the next two weeks and that each slot does only means that the item is available at least for part of that day. This is done to reduce the amount of data that has to be synched by the Commons Hub.
 
 ### Locations (`/locations`)
 
