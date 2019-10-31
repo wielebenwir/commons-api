@@ -1,16 +1,14 @@
 {
     "itemType": [
-        { "id": "single_lane", "name": "two wheels (single-lane)" },
-        { "id": "two_lane", "name": "more than two wheels (two-lane bike)" },
-        { "id": "trailer", "name": "trailer" }
+        { "id": "cargobike", "name": "Cargo Bike" },
+        { "id": "trailer", "name": "Trailer" }
     ],
     "features": [
-        { "id": "seats_children", "name": "Seats for Children" },
-        { "id": "rain_protection", "name": "Rain Protection" },
+        { "id": "rainProtection", "name": "Rain Protection" },
         { "id": "pedelec", "name": "Pedelec (E-Motor)" },
-        { "id": "lockable_box", "name": "Lockable Box" },
-        { "id": "lock", "name": "Lock" },
-        { "id": "tow_bar", "name": "Tow Bar" },
+        { "id": "platform", "name": "Platform without Box" },
+        { "id": "lockableBox", "name": "Lockable Box" },
+        { "id": "towBar", "name": "Tow Bar" },
         { "id": "strap", "name": "Strap" },
         {
             "id": "special_purpose",

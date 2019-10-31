@@ -30,10 +30,26 @@
                             "isCommercial": {
                                 "type": "boolean"
                             },
+                            "nrOfWheels": {
+                                "type": "integer",
+                                "minimum": 0
+                            },
+                            "seatsForChildren": {
+                                "type": "integer",
+                                "minimum": 0
+                            },
                             "loadCapacity": {
                                 "type": "number"
                             },
                             "boxDimensions": {
+                                "type": "object",
+                                "properties": {
+                                    "length": { "type": "number" },
+                                    "width": { "type": "number" },
+                                    "height": { "type": "number" }
+                                }
+                            },
+                            "bikeDimensions": {
                                 "type": "object",
                                 "properties": {
                                     "length": { "type": "number" },
